@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <title>Flexbox</title>
+    <style>
+        body {
+            font-size: 50px;
+        }
+
+        .my-flexbox {
+            width: 100vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+    <div class="my-flexbox d-flex bg-secondary justify-content-around align-items-stretch flex-wrap">
+        <div class="bg-primary p-3 rounded flex-grow-0 w-50 bg-success">01</div>
+        <div class="bg-primary p-3 rounded flex-shrink-1 w-50">02</div>
+        <div class="bg-primary p-3 rounded fs-6 align-self-baseline">03</div>
+        <div class="bg-primary p-3 rounded align-self-start">04</div>
+        <div class="bg-primary p-3 rounded align-self-end">05</div>
+        <div class="bg-primary p-3 rounded align-self-center">06</div>
+        <div class="bg-primary p-3 rounded">07</div>
+        <div class="bg-primary p-3 rounded">08</div>
+        <div class="bg-primary p-3 rounded">09</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap/bootstrap.js"></script>
+</body>
+
+</html>

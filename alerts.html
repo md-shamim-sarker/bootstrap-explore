@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <script src="./bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div id="liveAlertPlaceholder" class="mt-5 w-25"></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    </div>
+
+    <hr>
+
+    <div class="container mt-3">
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge text-bg-secondary">10</span>
+        </button>
+        <br>
+        <button type="button" class="btn btn-primary position-relative my-5">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+        <br>
+        <button type="button" class="btn btn-primary position-relative d-block">
+            Profile
+            <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+            </span>
+        </button>
+    </div>
+
+
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+        const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                ` <div>${message}</div>`,
+                ' <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert('Hello World! This is Bangladesh.', 'primary')
+            })
+        }
+    </script>
+
+
+</body>
+
+</html>
